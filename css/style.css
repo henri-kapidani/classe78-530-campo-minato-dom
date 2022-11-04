@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+header {
+	flex: 0 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .5rem 2rem;
+}
+
+.container {
+	flex: 1 0 0;
+	display: flex;
+	height: 100%;
+	background-color: salmon;
+}
+
+.start-screen {
+	margin: auto;
+}
+
+.grid {
+	--sideSquare: 10;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	width: 500px;
+	height: 500px;
+	border: 2px solid black;
+}
+
+.cell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid black;
+	height: calc(100% / var(--sideSquare));
+	width: calc(100% / var(--sideSquare));
+}
+
+.cell.mine {
+	background-color: red;
+}
+
+.cell.no-mine {
+	background-color: greenyellow;
+}
+
+.hidden {
+	display: none;
+}
